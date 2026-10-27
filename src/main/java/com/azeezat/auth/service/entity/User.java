@@ -132,4 +132,9 @@ public class User {
                 ", updatedAt=" + updatedAt +
                 '}';
     }
+
+    public void setRole(Role role) {
+    }
+
+
 }
