@@ -1,5 +1,6 @@
 package com.azeezat.auth.service.entity;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -123,18 +124,14 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", createdAt=" + createdAt +
-                ", updatedAt=" + updatedAt +
-                '}';
+        return STR."User{id=\{id}, firstName='\{firstName}', lastName='\{lastName}', email='\{email}', createdAt=\{createdAt}, updatedAt=\{updatedAt}}" ;
+    }
+
+    public Role getRole() {
+        return role;
     }
 
     public void setRole(Role role) {
+        this.role = role;
     }
-
-
 }
